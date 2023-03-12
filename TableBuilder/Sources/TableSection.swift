@@ -1,15 +1,15 @@
 import UIKit
 
+/// Класс секции таблицы
 open class TableSection {
+    
+    // MARK: - Properties
 
     open private(set) var rows = [TableRow]()
     
     open var headerTitle: String?
     open var footerTitle: String?
     open var indexTitle: String?
-    
-    open var headerView: UIView?
-    open var footerView: UIView?
     
     open var headerHeight: CGFloat? = nil
     open var footerHeight: CGFloat? = nil
@@ -21,6 +21,8 @@ open class TableSection {
     open var isEmpty: Bool {
         return rows.isEmpty
     }
+    
+    // MARK: - Life cycle
     
     public init(rows: [TableRow]? = nil) {
         if let initialRows = rows {
@@ -34,15 +36,8 @@ open class TableSection {
         self.headerTitle = headerTitle
         self.footerTitle = footerTitle
     }
-    
-    public convenience init(headerView: UIView?, footerView: UIView?, rows: [TableRow]? = nil) {
-        self.init(rows: rows)
-        
-        self.headerView = headerView
-        self.footerView = footerView
-    }
 
-    // MARK: - Public
+    // MARK: - Open methods
     
     open func clear() {
         rows.removeAll()
