@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE780C9429CA229D00BF6CA0 /* TableCellRegisterer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE780C9329CA229D00BF6CA0 /* TableCellRegisterer.swift */; };
+		CE780C9629CA241800BF6CA0 /* TableRowHeightCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE780C9529CA241800BF6CA0 /* TableRowHeightCalculator.swift */; };
 		CE8F264629BDE9A80042D3C7 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F264529BDE9A80042D3C7 /* TableSection.swift */; };
 		CE8F264829BDF15D0042D3C7 /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F264729BDF15D0042D3C7 /* TableRow.swift */; };
 		CE8F264B29BDFAA60042D3C7 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F264A29BDFAA60042D3C7 /* BaseTableViewCell.swift */; };
@@ -22,6 +24,8 @@
 		CE922D1C29B4E56C002ACFC8 /* TableBuilderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE922D1B29B4E56C002ACFC8 /* TableBuilderUITestsLaunchTests.swift */; };
 		CE922D2A29B4E5E2002ACFC8 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE922D2929B4E5E2002ACFC8 /* BaseTableViewController.swift */; };
 		CE922D2D29B4E6E3002ACFC8 /* TableDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE922D2C29B4E6E3002ACFC8 /* TableDirector.swift */; };
+		CECD7C1129C60B7700361CE4 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7C1029C60B7700361CE4 /* ConfigurableCell.swift */; };
+		CECD7C1329C60C5000361CE4 /* BaseCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD7C1229C60C5000361CE4 /* BaseCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE780C9329CA229D00BF6CA0 /* TableCellRegisterer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellRegisterer.swift; sourceTree = "<group>"; };
+		CE780C9529CA241800BF6CA0 /* TableRowHeightCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowHeightCalculator.swift; sourceTree = "<group>"; };
 		CE8F264529BDE9A80042D3C7 /* TableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
 		CE8F264729BDF15D0042D3C7 /* TableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
 		CE8F264A29BDFAA60042D3C7 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -61,6 +67,8 @@
 		CE922D1B29B4E56C002ACFC8 /* TableBuilderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBuilderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE922D2929B4E5E2002ACFC8 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		CE922D2C29B4E6E3002ACFC8 /* TableDirector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDirector.swift; sourceTree = "<group>"; };
+		CECD7C1029C60B7700361CE4 /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		CECD7C1229C60C5000361CE4 /* BaseCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,9 @@
 			children = (
 				CE8F264729BDF15D0042D3C7 /* TableRow.swift */,
 				CE8F264529BDE9A80042D3C7 /* TableSection.swift */,
+				CECD7C1029C60B7700361CE4 /* ConfigurableCell.swift */,
+				CE780C9329CA229D00BF6CA0 /* TableCellRegisterer.swift */,
+				CE780C9529CA241800BF6CA0 /* TableRowHeightCalculator.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -157,6 +168,7 @@
 				CE922D2929B4E5E2002ACFC8 /* BaseTableViewController.swift */,
 				CE8F264A29BDFAA60042D3C7 /* BaseTableViewCell.swift */,
 				CE8F264C29BDFC260042D3C7 /* BaseTableBuilder.swift */,
+				CECD7C1229C60C5000361CE4 /* BaseCellViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -300,12 +312,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECD7C1129C60B7700361CE4 /* ConfigurableCell.swift in Sources */,
 				CE8F264B29BDFAA60042D3C7 /* BaseTableViewCell.swift in Sources */,
 				CE8F264D29BDFC260042D3C7 /* BaseTableBuilder.swift in Sources */,
+				CECD7C1329C60C5000361CE4 /* BaseCellViewModel.swift in Sources */,
 				CE922CFD29B4E56A002ACFC8 /* ViewController.swift in Sources */,
 				CE922D2D29B4E6E3002ACFC8 /* TableDirector.swift in Sources */,
 				CE8F264829BDF15D0042D3C7 /* TableRow.swift in Sources */,
 				CE8F264629BDE9A80042D3C7 /* TableSection.swift in Sources */,
+				CE780C9629CA241800BF6CA0 /* TableRowHeightCalculator.swift in Sources */,
+				CE780C9429CA229D00BF6CA0 /* TableCellRegisterer.swift in Sources */,
 				CE922CF929B4E56A002ACFC8 /* AppDelegate.swift in Sources */,
 				CE922D2A29B4E5E2002ACFC8 /* BaseTableViewController.swift in Sources */,
 				CE922CFB29B4E56A002ACFC8 /* SceneDelegate.swift in Sources */,
