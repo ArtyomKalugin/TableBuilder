@@ -83,7 +83,7 @@ open class TableDirector: NSObject {
     @discardableResult
     open func invokeOnClick(
         cell:  UITableViewCell?,
-        indexPath: IndexPath) -> Any? {
+        indexPath: IndexPath) -> (() -> Void)? {
             guard let row = row(at: indexPath) else { return nil }
             
             return row.onClick
@@ -126,11 +126,13 @@ extension TableDirector: UITableViewDataSource, UITableViewDelegate {
     
     open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
+        let onClick = invokeOnClick(cell: cell, indexPath: indexPath)
         
-        if invokeOnClick(cell: cell, indexPath: indexPath) != nil {
-            invokeOnClick(cell: cell, indexPath: indexPath)
-            tableView.deselectRow(at: indexPath, animated: true)
+        if let onClick = onClick {
+            onClick()
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
