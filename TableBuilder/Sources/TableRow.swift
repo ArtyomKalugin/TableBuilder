@@ -6,6 +6,7 @@ public protocol Row  {
 
     var estimatedHeight: CGFloat? { get }
     var defaultHeight: CGFloat? { get }
+    var onClick: (() -> Void)? { get }
     
     var hashValue: Int { get }
     
@@ -18,6 +19,7 @@ open class TableRow<CellType: ConfigurableCell>: Row where CellType: UITableView
     // MARK: - Properties
 
     public let item: CellType.CellData
+    public let onClick: (() -> Void)?
     
     open var hashValue: Int {
         return ObjectIdentifier(self).hashValue
@@ -41,8 +43,10 @@ open class TableRow<CellType: ConfigurableCell>: Row where CellType: UITableView
     
     // MARK: - Life cycle
     
-    public init(item: CellType.CellData) {
+    public init(item: CellType.CellData,
+                onClick: (() -> Void)? = nil) {
         self.item = item
+        self.onClick = onClick
     }
     
     // MARK: - Methods
