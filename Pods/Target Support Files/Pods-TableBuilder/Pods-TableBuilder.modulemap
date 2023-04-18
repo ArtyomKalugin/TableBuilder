@@ -1,0 +1,6 @@
+framework module Pods_TableBuilder {
+  umbrella header "Pods-TableBuilder-umbrella.h"
+
+  export *
+  module * { export * }
+}

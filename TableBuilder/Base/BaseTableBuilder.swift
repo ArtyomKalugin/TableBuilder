@@ -1,5 +1,6 @@
 import Foundation
 
-/// Класс для создания секций таблицы 
-public class BaseTableBuilder {
+/// Протокол для создания секций таблицы
+public protocol BaseTableBuilder {
+    func makeSections() -> [TableSection]
 }

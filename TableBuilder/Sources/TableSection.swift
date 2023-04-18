@@ -41,11 +41,11 @@ open class TableSection {
     }
     
     public convenience init(headerView: UIView?, footerView: UIView?, rows: [Row]? = nil) {
-            self.init(rows: rows)
+        self.init(rows: rows)
             
-            self.headerView = headerView
-            self.footerView = footerView
-        }
+        self.headerView = headerView
+        self.footerView = footerView
+    }
 
     // MARK: - Open methods
     

@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import SnapKit
 
 /// Базовый класс для работы с таблицей
 public class BaseTableViewController: UIViewController {
@@ -10,17 +11,22 @@ public class BaseTableViewController: UIViewController {
     public required init?(coder: NSCoder) {
         tableView = UITableView()
         tableDirector = TableDirector(tableView: tableView)
-        
-        tableView.delegate = tableDirector
-        tableView.dataSource = tableDirector
-        
+    
         super.init(coder: coder)
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    public override func viewDidLoad() {
+        super.viewDidLoad()
         
-        updateSections()
+        view.addSubview(tableView)
+        
+        tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        let sections = updateSections()
+        tableDirector.append(sections: sections)
+        tableDirector.reload()
     }
     
     public func updateSections() -> [TableSection] {
